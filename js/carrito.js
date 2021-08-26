@@ -172,6 +172,7 @@ $(document).ready(function() {
             $("#homeImage").append('<div id="overlayCarrito"></div>');
             $("#overlayCarrito").hide().fadeIn(800);
 
+            
             divPorEntrada = document.createElement("div");
             divGeneral.appendChild(divPorEntrada);
 

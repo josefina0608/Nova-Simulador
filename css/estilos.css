@@ -124,21 +124,27 @@ header img {
     }
     
 #imagenPresentacion {
-        grid-column: 3 / 5;
+        grid-column: 3 / 6;
         grid-row: 2 / 6;
-        width: 30vw;
-        height: 55vh;
         justify-self: center;
         align-self: center;
-        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 16px 30px 0 rgba(0, 0, 0, 0.19);
         z-index: 99;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    #contenedorImgCuadrado {
+        width: 38vw;
+        height: 55vh;
+        overflow: hidden;
         border: .07em solid white;
+        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 16px 30px 0 rgba(0, 0, 0, 0.19);
+
     }
 
     #contenedorImg {
-        width: 30vw;
-        max-height: 55vh;
         overflow: hidden;
+        height: 55vh;
         border-radius: 100%;
         border: .07em solid white;
         display: flex;
@@ -159,11 +165,10 @@ header img {
         border-left: .2em solid white;
         padding-left: 2em;
         padding-bottom: 2em;
-        width: 100%;
-        margin: 1em auto;
-        position: absolute;
-        left: 33vw;
-        bottom: 0;
+        width: 50%;
+        height: 4rem;
+        margin: 1em 2em;
+    
     }
     
     
@@ -236,6 +241,22 @@ form {
   padding: 2em 2em;
   z-index: 999;
 }
+
+#cruzForm {
+
+    padding: 0 2em;
+    background-image: url(../imagenes/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color:transparent;
+    border: none;
+    height: 1.3em;
+    transition: all .2s linear;
+    width: 100%;
+
+}
+
 input, select {
     color: white;
     background-color: rgba(0, 0, 0, 0.63);
@@ -312,6 +333,7 @@ input, select {
     padding: 2rem;
     padding-top: 6rem;
     z-index: 999;
+    
 }
 
 .verEntradas {
