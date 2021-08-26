@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+    <link href="fuentes/MonumentExtended-Regular.ttf" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>NOVA | Festival de Astronomía Urbana</title>
+</head>
+<body>
+
+   <header>
+    <div class="logo">
+        <a href="index.html">
+        <img src="imagenes/logoblanco-01.svg" alt="Nova"></a>
+   </div>
+   <div id="carritoContenedor">
+    <button id="detalleCompra" type="button" class="botonCarrito"></button>
+    <div id="cantidadProductos"></div>
+   </div>
+   </header>
+
+   <section id="etapaVisible">
+    <div class="contenidoGeneral">
+        <div id="homeImage">
+            <div id="fondoHome"></div>
+            <h1 class="animate__animated animate__fadeInUp titular">Festival de<br>Astronomía<br>Urbana</h1>
+            <p class="datos" id="edicionPosicion">Edición II</p>
+            <p class="datos" id="lugarPosicion">Planetario de Buenos Aires</p>
+            <div id="imagenPresentacion" data-aos="fade-up" data-aos-duration="2000"></div>
+
+            <button id="compraEntrada">Comprá <br>tu entrada</button>
+
+            <div id="pasoDos" style="display: none;">
+                <form id="formulario">
+                <label for="dia">¿Qué día querés venir?</label>
+                <select name="dia" id="dia">
+                    <option value="seleccion">Seleccioná el día</option>
+                    <option value="1">Sábado 16 de Octubre</option>
+                    <option value="2">Domingo 17 de Octubre</option>
+                    <option value="3">Los dos dás</option>
+                </select>
+                
+                <label for="adultos">¿Cuántos mayores de 10 años?</label>
+                <input type="number" id="adultos" min="0" value="0" placeholder="0">
+
+                <label for="ninios">¿Cuántos menores de 10 años?</label>
+                <input type="number" id="ninios" min="0" value="0" placeholder="0">
+                <div id="error" class="error"></div>
+                <input type="submit" id="agregarEntrada" value="Agregar entradas">
+
+            </form>
+            </div>
+    
+            <div id="confirmacionCompra" style="display: none;"></div>
+            <div id="verEntradas" class="carritoExpand" style="display: none;"></div>
+
+        </div>
+    </div>
+
+
+</section>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+AOS.init({
+disable: function() {
+var maxWidth = 720;
+return window.innerWidth < maxWidth;
+}
+});
+
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/carrito.js"></script>
+    
+  
+</body>
+</html>
